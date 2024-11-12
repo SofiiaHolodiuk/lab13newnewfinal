@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Голодюк ПП-21</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				background-color: #f7f7f7;
+				color: #333;
+				margin: 0;
+				padding: 20px;
+			}
+			h1 {
+				color: #2e8b57;
+				text-align: center;
+			}
+			.container {
+				max-width: 800px;
+				margin: 0 auto;
+				background-color: #ffffff;
+				padding: 20px;
+				border-radius: 8px;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			}
+			.result {
+				font-size: 18px;
+				line-height: 1.6;
+				margin-bottom: 10px;
+				font-weight: bold;
+				color: #2c3e50;
+			}
+			.equation {
+				color: #ff6347;
+			}
+		</style>
+	</head>	
+	<body>
+		<h1>Створення користувацьких функцій</h1>
+		<div class="container">
+			<script>
+				// Функція для множення двох чисел
+				function MultiplyNums(firstnum, secondnum) { 
+					return firstnum * secondnum;
+				}
+
+				// Виведення результату множення 4 та 7
+				document.write('<p class="result">');
+				document.write('4 * 7 = <span class="equation">' + MultiplyNums(4, 7) + '</span></p>'); 
+
+				let x = 6;
+				let y = 9;
+				
+				// Виведення результату множення x та y
+				document.write('<p class="result">');
+				document.write(x + ' * ' + y + ' = <span class="equation">' + MultiplyNums(x, y) + '</span></p>');
+			</script>
+		</div>
+        <a href="C:\Users\user\Desktop\lab3_1.html\5\index.html">Перейдіть на іншу сторінку</a>
+	</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Голодюк ПП-21</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				background-color: #f0f8ff;
+				color: #333;
+				margin: 0;
+				padding: 20px;
+			}
+			h1 {
+				color: #2e8b57;
+				text-align: center;
+			}
+			.container {
+				max-width: 800px;
+				margin: 0 auto;
+				background-color: #ffffff;
+				padding: 20px;
+				border-radius: 8px;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			}
+			.text {
+				margin-bottom: 15px;
+				line-height: 1.6;
+			}
+			.text-large {
+				color: #ff6347;
+				font-weight: bold;
+			}
+			.text-small {
+				color: #4682b4;
+			}
+		</style>
+	</head>	
+	<body>
+		<h1>Створення користувацьких функцій</h1>
+		<div class="container">
+			<script>
+				"use strict";
+				
+				// Функція для виведення тексту з можливістю встановлення розміру шрифта
+				function printText(txt, size = 16) {
+					document.write(`<div class="text" style="font-size:${size}pt">${txt}</div>`);
+				}
+
+				// Виклик функції з передачею конкретного розміру шрифта
+				printText("<p class='text-large'>Це великий шрифт</p>", 24); 
+				
+				// Виклик функції з використанням значення параметра за замовчуванням
+				printText("<p class='text'>Шрифт за замовчуванням - перший рядок</p>"); 
+				printText("<p class='text'>Шрифт за замовчуванням - другий рядок</p>"); 
+				
+				// Виклик функції з малим шрифтом
+				printText("<p class='text-small'>Це малий шрифт</p>", 10);
+			</script>
+		</div>
+        <a href="C:\Users\user\Desktop\lab3_1.html\6\index.html">Перейдіть на іншу сторінку</a>
+	</body>
+</html>

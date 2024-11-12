@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Зворотній відлік до дня народження</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #fff;
+        }
+        .countdown {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .countdown h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .countdown p {
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="countdown">
+        <h1>До вашого дня народження залишилося:</h1>
+        <p id="countdown"></p>
+    </div>
+
+    <script>
+        "use strict";
+        
+        function updateCountdown() {
+            let today = new Date();
+            let birthDay = new Date(today.getFullYear(), 0, 23); // Встановлено дату народження - 23 січня
+            
+            // Якщо день народження вже пройшов цього року, встановимо на наступний рік
+            if (today > birthDay) {
+                birthDay.setFullYear(today.getFullYear() + 1);
+            }
+
+            const day = 86400000;
+            const hour = 3600000;
+            const minute = 60000;
+            
+            let time = birthDay.getTime() - today.getTime();
+            let days = Math.floor(time / day);
+            let hours = Math.floor((time - days * day) / hour);
+            let minutes = Math.floor((time - days * day - hours * hour) / minute);
+            
+            let str = days + " днів, " + hours + " годин, " + minutes + " хвилин!";
+            document.getElementById("countdown").textContent = str;
+        }
+
+        // Оновлюємо зворотній відлік щохвилини
+        updateCountdown();
+        setInterval(updateCountdown, 60000);
+    </script>
+    <a href="C:\Users\user\Desktop\lab3_1.html\3\index.html">Перейдіть на іншу сторінку</a>
+</body>
+</html>
+

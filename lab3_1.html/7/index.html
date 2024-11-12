@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Голодюк ПП-21</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				background-color: #f0f8ff;
+				color: #333;
+				margin: 0;
+				padding: 20px;
+			}
+			h1 {
+				color: #2e8b57;
+				text-align: center;
+			}
+			.container {
+				max-width: 800px;
+				margin: 0 auto;
+				background-color: #ffffff;
+				padding: 20px;
+				border-radius: 8px;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			}
+			.result {
+				font-size: 18px;
+				line-height: 1.6;
+				font-weight: bold;
+				color: #2c3e50;
+				margin-bottom: 20px;
+			}
+			.code-output {
+				background-color: #f4f4f4;
+				border-left: 4px solid #2e8b57;
+				padding: 10px;
+				font-family: "Courier New", Courier, monospace;
+			}
+		</style>
+	</head>	
+	<body>
+		<h1>Створення користувацьких функцій</h1>
+		<div class="container">
+			<script>
+				// Оголошуємо функцію f, яка просто виводить текст
+				function f() {
+					return "Це функція f!";
+				}
+
+				// Зберігаємо функцію f в змінній funcVar
+				let funcVar = f;
+
+				// Викликаємо функцію через змінну
+				document.write('<div class="result">Виклик функції через змінну: ' + funcVar() + '</div>');
+
+				// Тепер funcVar можна використовувати, як і звичайну функцію
+				funcVar = function() {
+					return "Тепер це нова функція!";
+				};
+
+				// Викликаємо нову функцію через змінну
+				document.write('<div class="result">Виклик нової функції через змінну: ' + funcVar() + '</div>');
+			</script>
+		</div>
+        <a href="C:\Users\user\Desktop\lab3_1.html\8\index.html">Перейдіть на іншу сторінку</a>
+	</body>
+</html>
