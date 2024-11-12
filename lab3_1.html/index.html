@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Голодюк ПП-21</title>
+	</head>	
+	<body>
+		<script>
+			// Функція для обчислення середнього значення з аргументів
+			function mean() {
+				// Перевірка на кількість аргументів
+				if (arguments.length > 3) {
+					alert("Аргументів більше, ніж треба!");
+				}
+				
+				var result = 0;
+				// Обчислюємо суму всіх аргументів
+				for (var i = 0; i < arguments.length; i++) {
+					result += arguments[i];
+				}
+				// Повертаємо середнє значення
+				return result / arguments.length;
+			}
+
+			// Викликаємо функцію mean з різною кількістю аргументів
+			document.write("Середнє - " + mean(2, 9) + "<br>");
+			document.write("Середнє - " + mean(7, 12, 6) + "<br>");
+			document.write("Середнє - " + mean(1, 4, 5, 10) + "<br>");
+		</script>
+        <a href="C:\Users\user\Desktop\lab3_1.html\1\index.html">Перейдіть на іншу сторінку</a>
+	</body>
+</html>
